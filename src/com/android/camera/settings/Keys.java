@@ -191,6 +191,10 @@ public class Keys {
             settingsManager.setToDefault(SettingsManager.SCOPE_GLOBAL, KEY_STORAGE);
         }
 
+        settingsManager.setDefaults(KEY_RECORD_LOCATION, false);
+        if (!settingsManager.isSet(SettingsManager.SCOPE_GLOBAL, KEY_RECORD_LOCATION)) {
+            settingsManager.setToDefault(SettingsManager.SCOPE_GLOBAL, KEY_RECORD_LOCATION);
+        }
     }
 
     /** Helper functions for some defined keys. */
